@@ -1,0 +1,131 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+.container {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.custom-text-color {
+  color: #7b7bcb !important;
+}
+
+.custom-text-color a {
+  color: #7b7bcb !important;
+}
+
+.custom-text-color a:hover {
+  color: #6767a2 !important; /* Color para el hover del enlace */
+}
+
+.foot {
+  background-color: #aeaecf;
+}
+
+#tiposde {
+  background-image: url(img/panoramica.jpg);
+  background-attachment: fixed;
+}
+
+#home {
+  text-decoration: none;
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.nav-item {
+  color: #7b7bcb;
+}
+
+.hover-scale:hover {
+  cursor: pointer;
+  transform: scale(1.05); /* Aquí puedes ajustar el valor para controlar cuánto se agranda la tarjeta */
+}
+
+.nav-pills .nav-link {
+  position: relative;
+  color: black;
+  padding-bottom: 8px;
+  text-decoration: none;
+}
+
+.nav-pills .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #7b7bcb; /* Cambia este color por el que desees */
+  transition: width 0.3s;
+}
+
+.nav-pills .nav-link:hover::after,
+.nav-pills .nav-link.active::after {
+  width: 100%;
+}
+
+.nav-pills .nav-link.active {
+  color: black;
+  background-color: white; /* Mantenemos el color del texto constante en la página activa */
+}
+
+/* Estilos para el texto del carrusel */
+.carousel-caption div {
+  text-align: right; /* Alinea el texto a la derecha por defecto */
+  margin-bottom: 2rem; /* Márgenes inferiores más grandes para pantallas más grandes */
+}
+
+@media (max-width: 768px) {
+  /* Consulta de medios para pantallas más pequeñas */
+  .carousel-caption div {
+    text-align: right; /* Alinea el texto al centro en pantallas más pequeñas */
+    margin-bottom: 0.1rem;
+    margin-top: 3rem; /* Márgenes inferiores más pequeños para pantallas más pequeñas */
+  }
+
+  .carousel-caption div h1 {
+    font-size: 3vw; /* Tamaño del título ajustado al tamaño de la ventana */
+  }
+
+  .carousel-caption div p {
+    font-size: 2vw; /* Tamaño del texto ajustado al tamaño de la ventana */
+  }
+
+  .carousel-caption div a.btn {
+    font-size: 1vw; /* Tamaño del botón ajustado al tamaño de la ventana */
+  }
+}
+
+/* Estilos para las flechas de navegación */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 3vw; /* Tamaño de las flechas ajustado al tamaño de la ventana */
+  height: 3vw;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    text-align: center; /* Centrar el Navbar */
+  }
+
+  .nav-pills {
+    display: flex; /* Usar flexbox para los elementos de la lista */
+    justify-content: center; /* Centrar los elementos de la lista horizontalmente */
+    margin-top: 10px; /* Ajustar el espacio superior en pantallas pequeñas */
+  }
+
+  .nav-pills li {
+    margin: 0 10px; /* Espacio entre los elementos de la lista */
+  }
+
+  .nav-link {
+    font-size: 0.8rem; /* Tamaño de la fuente más pequeño en pantallas pequeñas */
+  }
+}
